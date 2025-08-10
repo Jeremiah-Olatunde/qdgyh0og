@@ -3,6 +3,6 @@ import { type PropsWithChildren } from "react";
 
 type FormProps = {};
 
-export function Root({ children }: PropsWithChildren<FormProps>) {
+export function Form({ children }: PropsWithChildren<FormProps>) {
   return <BuiForm>{children}</BuiForm>;
 }

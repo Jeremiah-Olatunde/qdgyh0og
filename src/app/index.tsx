@@ -1,5 +1,7 @@
 import { Input } from "@/components/input";
 import * as Field from "@/components/field";
+import * as Fieldset from "@/components/fieldset";
+import { Form } from "@/components/form";
 
 export function App() {
   return (
@@ -14,20 +16,29 @@ export function App() {
           </p>
         </header>
 
-        <form className="flex flex-col gap-8">
-          <Field.Root name="name">
-            <Field.Label>Full Name</Field.Label>
-            <Field.Description>
-              The name given to you at birth
-            </Field.Description>
-            <Input
-              autoComplete="name"
-              color="neutral"
-              placeholder="Enter your full name"
-              type="text"
-            />
-          </Field.Root>
-        </form>
+        <Form>
+          <Fieldset.Root>
+            <Field.Root name="name">
+              <Field.Label>Full Name</Field.Label>
+              <Input
+                autoComplete="name"
+                color="neutral"
+                placeholder="Enter your full name"
+                type="text"
+              />
+            </Field.Root>
+
+            <Field.Root name="email">
+              <Field.Label>Email</Field.Label>
+              <Input
+                autoComplete="email"
+                color="neutral"
+                placeholder="Enter your email"
+                type="email"
+              />
+            </Field.Root>
+          </Fieldset.Root>
+        </Form>
       </section>
     </section>
   );
