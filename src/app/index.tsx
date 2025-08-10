@@ -17,6 +17,9 @@ export function App() {
         <form className="flex flex-col gap-8">
           <Field.Root name="name">
             <Field.Label>Full Name</Field.Label>
+            <Field.Description>
+              The name given to you at birth
+            </Field.Description>
             <Input
               autoComplete="name"
               color="neutral"
