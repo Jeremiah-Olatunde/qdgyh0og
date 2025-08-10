@@ -12,6 +12,7 @@
   "dependencies": {
     "@base-ui-components/react": "^1.0.0-beta.2",
     "@fontsource-variable/sora": "^5.2.6",
+    "class-variance-authority": "^0.7.1",
     "react": "^19.1.1",
     "react-dom": "^19.1.1"
   },
