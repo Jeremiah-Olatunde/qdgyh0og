@@ -1,4 +1,5 @@
 import { Input } from "@/components/input";
+import * as Field from "@/components/field";
 
 export function App() {
   return (
@@ -14,37 +15,15 @@ export function App() {
         </header>
 
         <form className="flex flex-col gap-8">
-          <Input
-            autoComplete="name"
-            color="neutral"
-            name="name"
-            placeholder="Enter your full name"
-            type="text"
-          />
-
-          <Input
-            autoComplete="email"
-            color="red"
-            name="email"
-            placeholder="Enter your email"
-            type="email"
-          />
-
-          <Input
-            autoComplete="telephone"
-            color="green"
-            name="telephone"
-            placeholder="Enter your phone number"
-            type="tel"
-          />
-
-          <Input
-            autoComplete="current-password"
-            color="yellow"
-            name="password"
-            placeholder="Enter your password"
-            type="password"
-          />
+          <Field.Root name="name">
+            <Field.Label>Full Name</Field.Label>
+            <Input
+              autoComplete="name"
+              color="neutral"
+              placeholder="Enter your full name"
+              type="text"
+            />
+          </Field.Root>
         </form>
       </section>
     </section>
