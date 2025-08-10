@@ -3,5 +3,8 @@
 @import "@fontsource-variable/sora";
 
 @theme {
+  --color-primary: #6d28d9;
+  --color-secondary: #fcd34d;
   --font-sora: "Sora Variable", sans-serif;
+  --text-xxs: 10px;
 }
