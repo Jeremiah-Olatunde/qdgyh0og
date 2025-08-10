@@ -1,1 +1,7 @@
 @import "tailwindcss";
+
+@import "@fontsource-variable/sora";
+
+@theme {
+  --font-sora: "Sora Variable", sans-serif;
+}
