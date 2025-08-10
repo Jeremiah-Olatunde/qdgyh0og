@@ -23,14 +23,12 @@ type InputVariantProps = {
 
 type InputProps = {
   autoComplete: string;
-  name: string;
   placeholder: string;
   type: "text" | "email" | "password" | "tel";
 };
 
 export function Input({
   autoComplete,
-  name,
   type,
   placeholder,
   children,
@@ -39,8 +37,6 @@ export function Input({
   return (
     <div className={generateClasses({ color })}>
       <BaseUIInput
-        id={name}
-        name={name}
         autoComplete={autoComplete}
         type={type}
         placeholder={placeholder}
