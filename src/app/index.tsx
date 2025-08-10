@@ -2,6 +2,8 @@ import { Input } from "@/components/input";
 import * as Field from "@/components/field";
 import * as Fieldset from "@/components/fieldset";
 import { Form } from "@/components/form";
+import { Badge } from "@/components/badge";
+import { Button } from "@/components/button";
 
 export function App() {
   return (
@@ -28,15 +30,21 @@ export function App() {
               />
             </Field.Root>
 
-            <Field.Root name="email">
-              <Field.Label>Email</Field.Label>
+            <Field.Root name="telephone">
+              <Field.Label>Telephone</Field.Label>
               <Input
-                autoComplete="email"
+                autoComplete="tel-national"
                 color="neutral"
-                placeholder="Enter your email"
-                type="email"
+                placeholder="Enter your phone number"
+                type="tel"
               />
             </Field.Root>
+
+            <Button handleClick={() => {}} type="submit">
+              <Badge color="purple" size="lg">
+                Submit
+              </Badge>
+            </Button>
           </Fieldset.Root>
         </Form>
       </section>
