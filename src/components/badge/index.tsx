@@ -7,8 +7,8 @@ const base = tw`w-full flex items-center justify-center font-sora font-semibold 
 
 const red = tw`bg-red-600 text-white`;
 const purple = tw`bg-primary text-white`;
-const yellow = tw`bg-secondary text-black`;
-const neutral = tw`bg-neutral-100 text-black`;
+const yellow = tw`bg-secondary text-neutral-600`;
+const neutral = tw`bg-neutral-100 text-neutral-600`;
 
 const sm = tw`rounded-sm px-3 py-1 text-xxs`;
 const md = tw`rounded-md p-2 text-xs`;
