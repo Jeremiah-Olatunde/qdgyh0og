@@ -14,17 +14,13 @@ export function App() {
   return (
     <section className="p-6">
       <section className="py-16 flex flex-col gap-4">
-        <header className="">
-          <h1 className="font-sora font-semibold text-xl text-center text-neutral-600">
-            Test Form
-          </h1>
-          <p className="font-sora font-medium text-sm text-neutral-500 text-center">
-            Surely some revelation is at hand!
-          </p>
-        </header>
-
         <Form>
           <Fieldset.Root>
+            <Fieldset.Legend
+              title="The Second Coming"
+              description="Surely some revelation is at hand"
+            />
+
             <Field.Root name="name">
               <Field.Label>Full Name</Field.Label>
               <Input
@@ -32,6 +28,16 @@ export function App() {
                 color="neutral"
                 placeholder="Enter your full name"
                 type="text"
+              />
+            </Field.Root>
+
+            <Field.Root name="email">
+              <Field.Label>Email </Field.Label>
+              <Input
+                autoComplete="email"
+                color="neutral"
+                placeholder="Enter your email"
+                type="email"
               />
             </Field.Root>
 
@@ -51,6 +57,21 @@ export function App() {
                 autoComplete="current-password"
                 color="neutral"
                 placeholder="Choose a password"
+                type={passwordVisible ? "text" : "password"}
+              >
+                <TogglePassword
+                  pressed={passwordVisible}
+                  onPressedChanged={setPasswordVisible}
+                />
+              </Input>
+            </Field.Root>
+
+            <Field.Root name="confirm-password">
+              <Field.Label>Confirm Password</Field.Label>
+              <Input
+                autoComplete="current-password"
+                color="neutral"
+                placeholder="Re-enter your password"
                 type={passwordVisible ? "text" : "password"}
               >
                 <TogglePassword
