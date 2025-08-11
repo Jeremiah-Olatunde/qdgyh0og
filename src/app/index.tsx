@@ -1,9 +1,9 @@
 import { useState } from "react";
 
-import { Input } from "@/components/input";
-import * as Field from "@/components/field";
-import * as Fieldset from "@/components/fieldset";
-import { Form } from "@/components/form";
+import { Input } from "@/components/form/core/input";
+import * as Field from "@/components/form/core/field";
+import * as Fieldset from "@/components/form/core/fieldset";
+import { Form } from "@/components/form/core/form";
 import { Badge } from "@/components/badge";
 import { Button } from "@/components/button";
 import { TogglePassword } from "@/components/toggle-password";
