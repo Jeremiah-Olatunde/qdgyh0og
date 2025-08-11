@@ -1,9 +1,16 @@
 import { useState } from "react";
 
-import { Form, Stage, Header, Input, Label, Field } from "@/components/form/";
+import {
+  Form,
+  Stage,
+  Header,
+  Input,
+  Label,
+  Field,
+  Toggle,
+} from "@/components/form/";
 import { Badge } from "@/components/badge";
 import { Button } from "@/components/button";
-import { TogglePassword } from "@/components/toggle-password";
 
 export function App() {
   const [passwordVisible, setPasswordVisible] = useState(false);
@@ -70,9 +77,9 @@ export function App() {
                 placeholder="Choose a password"
                 type={passwordVisible ? "text" : "password"}
               >
-                <TogglePassword
+                <Toggle
                   pressed={passwordVisible}
-                  onPressedChanged={setPasswordVisible}
+                  onPressedChange={setPasswordVisible}
                 />
               </Input>
             </Field>
@@ -85,9 +92,9 @@ export function App() {
                 placeholder="Re-enter your password"
                 type={passwordVisible ? "text" : "password"}
               >
-                <TogglePassword
+                <Toggle
                   pressed={passwordVisible}
-                  onPressedChanged={setPasswordVisible}
+                  onPressedChange={setPasswordVisible}
                 />
               </Input>
             </Field>

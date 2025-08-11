@@ -43,4 +43,5 @@ export function Header({ title, description }: HeaderProps) {
 }
 
 export { Input } from "./core/input";
+export { Toggle } from "./core/toggle";
 export { Label, Root as Field } from "./core/field";
