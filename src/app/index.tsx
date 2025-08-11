@@ -1,11 +1,16 @@
+import { useState } from "react";
+
 import { Input } from "@/components/input";
 import * as Field from "@/components/field";
 import * as Fieldset from "@/components/fieldset";
 import { Form } from "@/components/form";
 import { Badge } from "@/components/badge";
 import { Button } from "@/components/button";
+import { TogglePassword } from "@/components/toggle-password";
 
 export function App() {
+  const [passwordVisible, setPasswordVisible] = useState(false);
+
   return (
     <section className="p-6">
       <section className="py-16 flex flex-col gap-4">
@@ -38,6 +43,21 @@ export function App() {
                 placeholder="Enter your phone number"
                 type="tel"
               />
+            </Field.Root>
+
+            <Field.Root name="password">
+              <Field.Label>Password</Field.Label>
+              <Input
+                autoComplete="current-password"
+                color="neutral"
+                placeholder="Choose a password"
+                type={passwordVisible ? "text" : "password"}
+              >
+                <TogglePassword
+                  pressed={passwordVisible}
+                  onPressedChanged={setPasswordVisible}
+                />
+              </Input>
             </Field.Root>
 
             <Button handleClick={() => {}} type="submit">
